@@ -56,12 +56,4 @@ public class CatsInteractionController {
                 "Ошибка с параметром count.", e.getMessage()
         );
     }
-    // Обработчик для HappinessOverflowException
-    @ExceptionHandler
-    public Map<String, String> handleHappinessOverflow(final HappinessOverflowException e) {
-        return Map.of(
-                "happinessLevel", String.valueOf(e.getHappinessLevel()),
-                "error", "Осторожно, вы так избалуете пёсика!"
-        );
-    }
 }
